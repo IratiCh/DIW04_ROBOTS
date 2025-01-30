@@ -1,0 +1,297 @@
+/* Reglas generales */
+/* Definimos las variables de colores */
+:root {
+  --enlace-text: #ff1616;
+  --text-color: rgb(63, 63, 63);
+}
+
+/* Reinicio de estilos y bloques generales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+header,
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer {
+  padding: 4rem 0;
+}
+
+/* Menú Cabecera */
+
+.nav {
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav__menu {
+  list-style-type: none;
+}
+
+.nav__item {
+  display: block;
+  margin: 0.5rem;
+}
+
+.nav__link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav__link--active {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.nav__link:hover {
+  color: var(--enlace-text);
+}
+
+/* Contenido */
+
+main {
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.container__title {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.container__title,
+.container_subtitle,
+.definition__term {
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.container__text,
+.definition__desc {
+  margin-bottom: 1rem;
+}
+
+i {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+figure {
+  margin: 1rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.figure__img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.enlace {
+  color: var(--enlace-text);
+  text-decoration: none;
+}
+
+.enlace:hover {
+  text-decoration: underline;
+}
+
+/* Definimos las reglas para delimitar el ancho del contenido dependiendo la pantalla */
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+/* Reglas para el index.html */
+
+.index__subtitle {
+  font-size: 3rem;
+}
+
+.index figcaption {
+  width: 100%;
+  margin-top: 1rem;
+  text-align: right;
+  font-size: 10px;
+}
+
+.figure__video iframe {
+  width: 65%;
+  height: 450px;
+}
+
+.figure__video figcaption {
+  width: 65%;
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.index ul {
+  list-style-type: square;
+  padding-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+#desiree p:first-child {
+  background: lightgray;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 12.5px;
+}
+
+#desiree img {
+  border-radius: 50%;
+}
+
+#desiree strong {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.text-desiree {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .text-desiree {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-desiree {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .text-desiree {
+    max-width: 1000px;
+  }
+}
+
+/* Reglas para tipos-de-robots.html */
+
+.tipos {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .tipos {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tipos {
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .tipos {
+    max-width: 650px;
+  }
+}
+
+/* Visualización de la cita en bloque */
+
+blockquote {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgb(236, 235, 235);
+  border-left: 5px solid red;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Como se visualiza la lista */
+
+.robots-list {
+  list-style-type: none;
+}
+
+.robots-list__item {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+}
+
+.robots-list__item--icon::before {
+  content: url("../img/icon-robot.png");
+  position: absolute;
+  left: 0;
+  top: -0.5rem;
+}
+
+.robots-list__second {
+  list-style-type: square;
+  margin-top: 1rem;
+  padding-left: 3rem;
+}
+
+.robots-list__second ul {
+  padding-left: 3rem;
+}
+
+.robots-list__second-item {
+  list-style-type: circle;
+}
+
+/* Reglas para robots-de-ficcion.html */
+
+.ficcion__term {
+  font-size: 2rem;
+}
+
+.ficcion__figcaption {
+  margin-top: 1rem;
+}
